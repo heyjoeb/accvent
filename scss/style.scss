@@ -1,0 +1,28 @@
+/*
+Theme Name: accvent theme
+Author: hey joe
+Author URI: http://heyjoe.com.co/
+Description:  Accvent custom wordpress theme.
+Version: 1.0
+
+*/
+@import "normalize";
+@import "bootstrap";
+@import "fonts";
+@import "media-queries";
+@import "settings";
+@import "section-top";
+@import "section-programs";
+@import "section-gallery";
+@import "section-testimonials";
+@import "section-partners";
+@import "section-questions";
+@import "section-footer";
+
+
+/*=============================
+=            INTRO            =
+=============================*/
+html {
+  color: yellow;
+}
