@@ -9,11 +9,11 @@ body.login div#login {
 body.login div#login h1 a {
   height: 77px;
   width: 251px;
-  background-image: url('../assets/login-logo-accvent.png');
+  background-image: url('../accvent-theme/assets/login-logo-accvent.png');
   background-size: 100%;
 }
 body.login {
-  background-image: url('../assets/bg-accvent-login.jpg');
+  background-image: url('../accvent-theme/assets/bg-accvent-login.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

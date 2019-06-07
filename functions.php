@@ -1,9 +1,12 @@
 <?php
-/* Add message above login form */
+/* ADD MEESAGE ABOVE LOGIN FORM */
 function wpsd_add_login_message() {
   return '<div class="intro-container"><h1 class="intro-title">Welcome to the ACCVENT Business Center</h1><p class="intro-message">Accvent vision is to broaden its scope to encompass a significant share of the fast growing technology industry on a global scale, with distribution channels in the USA, Latin America, the Caribbean and recently, in South Africa. Using experience, tradition and expertise in this highly diversified field of technology,Accvent is consistently lending its assistance to improve coordination among its strategic business units - now under the umbrella of a holding company - in order to achieve each brand’s corporate goals and to continue the expansion of their operations worldwide.</p><p class="intro-copyright">Copyright © ACCVENT 2019</p></div>';
 }
 add_filter('login_message', 'wpsd_add_login_message');
+
+// REGISTER CUTOM NAVIAGTION WALKER
+require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 
 	// REGISTER PRIMARY NAVIGATION
 	register_nav_menus( array(
@@ -28,7 +31,7 @@ add_filter('login_message', 'wpsd_add_login_message');
 
 	// CUSTOM LOGIN
 	function my_login_stylesheet() {
-	    wp_enqueue_style( 'custom-login', get_template_directory_uri() . '/scss/login.css' );
+	    wp_enqueue_style( 'custom-login', get_template_directory_uri() . './login.css' );
 	}
 	add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 
@@ -49,9 +52,7 @@ add_filter('login_message', 'wpsd_add_login_message');
 			'menu_title'	=> 'Módulos',
 			'menu_slug' 	=> 'modulos-generales',
 			'capability'	=> 'edit_posts',
-			'position'		=> false,
-			'icon_url'      => false,
-			'redirect'		=> true
+			'redirect'		=> false,
 		));
 
 		acf_add_options_sub_page(array(
@@ -60,8 +61,6 @@ add_filter('login_message', 'wpsd_add_login_message');
 			'menu_slug' 	=> 'header',
 			'capability'	=> 'edit_posts',
 			'parent_slug'	=> 'modulos-generales',
-			'position'		=> false,
-			'icon_url'      => false
 		));
 		
 		

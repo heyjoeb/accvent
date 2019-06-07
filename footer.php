@@ -1,10 +1,10 @@
 <footer class="main-footer">
       
 
-      <div class="container-fluid copyright">
+      <div class="container-fluid copyright text-center py-5">
         <div class="row">
-          <div class="col-xs-12 text-center">
-            <p>Copyright <?php echo date('Y'); ?> PUREGUARD, All Right Reserved</p>
+          <div class="col">
+            <p class="my-0">Copyright <?php echo date('Y'); ?> ACCVENT</p>
           </div>
         </div>
       </div><!--/.container-fluid -->

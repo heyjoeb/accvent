@@ -4,9 +4,9 @@
 $c-white: #fff;
 $c-chocolate: #252423;
 $c-orange: #eab96a;
-$c-gray: #6c6c6c;
+$c-gray: #5b5b5b;
 $c-black: #1f1f1f;
-$c-lightgray: #adadad;
+$c-lightgray: #f1f1f1;
 $c-red: #c92424;
 $c-green: #6a9c00;
 
@@ -15,9 +15,6 @@ $c-green: #6a9c00;
 =            FONT FAMILIES            =
 =====================================*/
 $font-default: 'crimson_textregular';
-$font-intro: 'intro_regular';
-$font-flashy: 'intro_rust_gbase_2_line';
-$font-display-black: 'playfair_displayblack';
 
 
 /*====================================
@@ -33,25 +30,8 @@ $font-md: 1.125rem;
 /*============================
 =            HTML            =
 ============================*/
-html {
-	font-size: 16px;
-	letter-spacing: 0.17px;
-	line-height: 1.563em;
-}
-body {
-  position: relative;
-}
-.container {
-	font-size: $font-md;
-}
-section {
-  font-family: $font-default;
-  background-image: url(../assets/bg-main.jpg);
-  background-repeat: repeat;
-  background-size: 100px;
-}
-.txt-highlight {
-  color: $c-orange;
+img {
+  max-width: 100%;
 }
 @mixin transition_all {
   transition: all 300ms linear;
@@ -62,7 +42,6 @@ section {
   background-color: $c-black;
   color: $c-white;
   border-radius: 0;
-  font-family: $font-intro;
   text-align: center;
   min-width: 240px;
   padding: 15px;
@@ -78,8 +57,10 @@ a {
   @include transition_all;
   display: inline-block;
   text-decoration: none;
+  color: $c-gray;
   &:hover, &:active, &:focus {
     @include transition_all;
+    color: $c-green;
   }
 }
 button {
@@ -88,7 +69,20 @@ button {
     @include transition_all;
   }
 }
-
+.btn {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  &-white {
+    border-color: $c-white;
+    color: $c-white;
+    &:hover, &:active, &:focus {
+      border-color: $c-green;
+      color: $c-green;
+    }
+  }
+}
 
 
 

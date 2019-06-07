@@ -1,1 +1,28 @@
 @import "../node_modules/slick-carousel/slick/slick.scss";
+.main-slider {
+  &__item {
+    margin: 0 10px;
+  }
+  &__item-wrapper {
+    position: relative;
+    &-text {
+      position: absolute;
+      z-index: 1;
+      color: $c-white;
+      width: 80%;
+      max-width: 520px;
+      text-align: center;
+      top: 35%;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .slick-arrow {
+    display: none !important;
+  }
+}
