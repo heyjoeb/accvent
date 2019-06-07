@@ -19,12 +19,13 @@ function css() {
 }
 
 function js() {
-    return src('node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js', { sourcemaps: true })
+    return src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/slick-carousel/slick/slick.min.js', './js/main.js'], { sourcemaps: true })
         .pipe(babel({
             presets: ['@babel/env']
         }))
         .pipe(concat('build.min.js'))
-        .pipe(dest('./js', { sourcemaps: true }));
+        .pipe(dest('./js'), { sourcemaps: true })
+        .pipe(browserSync.stream());
 }
 
 function assets() {
@@ -45,9 +46,11 @@ function browser() {
     });
 
     watch('./scss/**/*.scss', css);
+    watch('./js/main.js', js);
     watch('./assets', assets).on('change', browserSync.reload);
-    watch('./js/*.js', js).on('change', browserSync.reload);
 }
+
+
 
 exports.css = css;
 exports.js = js;

@@ -53,12 +53,10 @@ $(document).ready(function() {
     }, 1000);
   });
   /* gallery slider */
-  $('.section-gallery__slider').slick({
-    arrows: true,
+  $('.main-slider').slick({
     centerMode: true,
-    slidesToShow: 3,
-    prevArrow: $('.prev'),
-    nextArrow: $('.next'),
+    centerPadding: '20%',
+    slidesToShow: 1,
     responsive: [
       {
         breakpoint: 900,
@@ -73,67 +71,12 @@ $(document).ready(function() {
           slidesToScroll: 1
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
   ]
   });
-  /* testimonials slider */
-  $('.section-testimonials__slider').slick({
-    arrows: true,
-    dots: true,
-    prevArrow: $('.prev-2'),
-    nextArrow: $('.next-2')
-  });
-  /* partners slider */
-  $('.section-partners__slider').slick({
-    arrows: true,
-    slidesToShow: 6,
-    infinite: true,
-    prevArrow: $('.prev-3'),
-    nextArrow: $('.next-3'),
-      responsive: [
-        {
-          breakpoint: 900,
-          settings: {
-            slidesToShow: 4
-          }
-        },
-        {
-          breakpoint: 500,
-          settings: {
-            slidesToShow: 1,
-          }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-    ]
-  });
 });
-var $gallery = $('.section-gallery__slider');
-  var slideCount = null;
-  $gallery.on('init', function(event, slick){
-    slideCount = slick.slideCount;
-    setSlideCount();
-    setCurrentSlideNumber(slick.currentSlide);
-  });
 
-  $gallery.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    setCurrentSlideNumber(nextSlide);
-  });
-
-  function setSlideCount() {
-    var $el = $('.slide-count-wrap').find('.total');
-    $el.text(slideCount);
-  }
-
-  function setCurrentSlideNumber(currentSlide) {
-    var $el = $('.slide-count-wrap').find('.current');
-    $el.text(currentSlide + 1);
-  }
 function init() {
   // FADE IN
-  $('body').removeClass('fade-out');   
+  $('body').removeClass('fade');   
 }
 window.onload = init();

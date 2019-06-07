@@ -1,0 +1,133 @@
+body.login div#login {
+  background-color: rgba(0,0,0,0.8);
+  width: 60%;
+  margin-top: 100px;
+  padding: 75px 75px 250px 75px;
+  color: #fff;
+  position: relative;
+}
+body.login div#login h1 a {
+  height: 77px;
+  width: 251px;
+  background-image: url('../assets/login-logo-accvent.png');
+  background-size: 100%;
+}
+body.login {
+  background-image: url('../assets/bg-accvent-login.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.login form {
+  background-color: transparent;
+  color: #fff;
+  max-width: 500px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login form .input, .login input[type=text] {
+  background-color: transparent;
+  border-bottom: solid 1px #fff;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+}
+.login form input[type=checkbox] {
+  background-color: transparent;
+  border: solid 1px #fff;
+}
+.submit #wp-submit {
+  border: 0;
+  background-color: #7bb113;
+  border-radius: 20px;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0 30px;
+  float: none;
+  height: 40px;
+  font-size: 16px;
+}
+.login #login_error {
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  border: solid 1px #dc3232;
+  max-width: 500px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login #nav, .login #backtoblog {
+  text-align: center;
+  color: #fff;
+}
+.login #backtoblog a, .login #nav a {
+  color: #fff;
+}
+.login #backtoblog a:hover, .login #nav a:hover, .login h1 a:hover {
+  color: #7bb113;
+}
+input[type=checkbox]:checked:before {
+  color: #7bb113;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #fff !important;;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #fff !important;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #fff !important;
+}
+input[type=checkbox], input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=radio], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea {
+  color: #fff;
+}
+.login #backtoblog {
+  display: none;
+}
+.login form .forgetmenot {
+  float: none;
+  text-align: center;
+}
+#login form p.submit {
+  text-align: center;
+  padding-top: 30px;
+}
+.login .intro-title {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.login .intro-message {
+  text-align: center;
+}
+.login .intro-copyright {
+  text-align: center;
+  padding-top: 30px;
+}
+.login .intro-container {
+  position: absolute;
+  bottom: 30px;
+  width: 80%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login #nav {
+  margin-top: 0;
+}
+.login .message {
+  background-color: transparent;
+  border: 1px solid #00a0d2;
+  text-align: center;
+  max-width: 500px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
