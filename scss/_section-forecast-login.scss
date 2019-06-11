@@ -1,0 +1,37 @@
+.forecast-login {
+  margin-bottom: 40px;
+  &-title {
+    font-weight: $fw-regular;
+    font-size: 1.3rem;
+    border-top: solid 1px $c-lightgray;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+  select {
+    background-color: $c-lightgray;
+    border-radius: 30px;
+  }
+  .btn {
+    display: block;
+    width: 100%;
+  }
+  a {
+    color: $c-blue;
+  }
+  &-bc {
+    padding-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    img {
+      margin-top: 50px;
+    }
+  }
+  &-requests {
+    padding-left: 15px;
+    h2 {
+      font-weight: $fw-regular;
+      font-size: 1.3rem;
+    }
+  }
+}

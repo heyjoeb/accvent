@@ -1,0 +1,47 @@
+.posts-feed {
+  h2 {
+    font-weight: $fw-regular;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+  &__title {
+    padding: 0 15px;
+  }
+  &__excerpt {
+    padding: 0 15px;
+  }
+  &__post {
+    margin-bottom: 80px;
+  }
+  &__meta {
+    padding-top: 15px;
+    border-top: solid 1px $c-lightgray;
+    color: $c-gray;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .page-item.active .page-link {
+    background-color: $c-lightgray;
+    border-color: $c-lightgray;
+    color: $c-black;
+  }
+  .page-link {
+    color: $c-black;
+  }
+  .post-edit-link {
+    font-size: 0;
+    width: 25px;
+    height: 25px;
+    background-image: url(../accvent-theme/assets/icon-edit.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    @include transition_all;
+    &:hover {
+      @include transition_all;
+      opacity: 0.6;
+    }
+  }
+}

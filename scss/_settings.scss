@@ -9,12 +9,13 @@ $c-black: #1f1f1f;
 $c-lightgray: #f1f1f1;
 $c-red: #c92424;
 $c-green: #6a9c00;
+$c-blue: #0082c5;
 
 
 /*=====================================
 =            FONT FAMILIES            =
 =====================================*/
-$font-default: 'crimson_textregular';
+$font-default: 'Nunito Sans', sans-serif;
 
 
 /*====================================
@@ -25,13 +26,27 @@ $font-xl: 1.750rem;
 $font-lg: 1.563rem;
 $font-md: 1.125rem;
 
+/*====================================
+=            FONT WEIGHTS            =
+====================================*/
+$fw-bold: 600;
+$fw-regular: 400;
+$fw-light: 300;
 
 
 /*============================
 =            HTML            =
 ============================*/
+.accvent-theme {
+  h1, h2, h3, h4, h5, p, ul, li, span {
+    font-family: $font-default;
+  }
+}
 img {
   max-width: 100%;
+}
+.txt-bold {
+  font-weight: $fw-bold;
 }
 @mixin transition_all {
   transition: all 300ms linear;
@@ -57,10 +72,11 @@ a {
   @include transition_all;
   display: inline-block;
   text-decoration: none;
-  color: $c-gray;
+  color: $c-black;
   &:hover, &:active, &:focus {
     @include transition_all;
     color: $c-green;
+    text-decoration: none;
   }
 }
 button {
@@ -71,15 +87,28 @@ button {
 }
 .btn {
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   border-radius: 20px;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  padding: 5px 30px;
   &-white {
     border-color: $c-white;
     color: $c-white;
+    font-weight: $fw-light;
     &:hover, &:active, &:focus {
       border-color: $c-green;
       color: $c-green;
+    }
+  }
+  &-blue {
+    border-color: $c-blue;
+    background-color: $c-blue;
+    color: $c-white;
+    font-weight: $fw-light;
+    &:hover, &:active, &:focus {
+      border-color: $c-green;
+      background-color: $c-green;
+      color: $c-white;
     }
   }
 }
