@@ -1,0 +1,60 @@
+.user-info {
+  &-title {
+    font-weight: $fw-regular;
+    font-size: 1.3rem;
+    border-top: solid 1px $c-lightgray;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+  .avatar {
+    border-radius: 50%;
+    padding: 5px;
+    border: solid 1px $c-lightgray;
+  }
+  &-name {
+    font-size: 1.3rem;
+    padding-top: 15px;
+  }
+  &-posts-number {
+    padding-top: 15px
+  }
+  &-comments {
+    padding-top: 15px;
+    a {
+      &:before {
+        content: "";
+        background-size: 24px;
+        width: 24px;
+        height: 21px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin-right: 7px;
+        background-image: url(../accvent-theme/assets/icon-comments.svg);
+      }
+    }
+  }
+  &-links {
+    padding-top: 30px;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      padding: 5px 0;
+    }
+    a {
+      color: $c-blue;
+      &:hover, &:active, &:focus {
+        color: $c-green;
+      }
+    }
+  }
+  &-logout {
+    padding-top: 30px;
+    .btn {
+      width: 100%;
+    }
+  }
+}

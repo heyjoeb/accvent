@@ -98,11 +98,42 @@
             <a href="">Report View</a>
           </div>
         </div>
-        <div class="user-module justify-content-center">
-          <h2>Welcome!</h2>
+        <div class="user-info text-center">
+          <h2 class="user-info-title">Welcome!</h2>
+          <div class="user-info-info">
+            <?php global $current_user;
+              get_currentuserinfo();    
+            ?>
+            <div class="user-info-image">
+              <?php echo get_avatar( get_the_author_meta('user_email'), $size = '95'); ?> 
+            </div>
+            <div class="user-info-name">
+              <?php echo $current_user->display_name; ?>
+            </div>
+            <div class="user-info-posts-number">
+              <?php echo 'Published: ' . count_user_posts( $current_user->ID ); ?>
+            </div>
+            <div class="user-info-comments">
+             <a class="d-flex justify-content-center align-items-center" target="_blank" href="/wp-admin/edit-comments.php?comment_status=mine&user_id=<?php echo $current_user->ID ?>">Comments</a>
+            </div>
+            <div class="user-info-links">
+              <ul>
+                <li><a target="_blank" href="/wp-admin/post-new.php">Add new item</a></li>
+                <li><a target="_blank" href="">My Page</a></li>
+                <li><a target="_blank" href="">My Account</a></li>
+                <li><a target="_blank" href="">Moderate comments</a></li>
+              </ul>
+            </div>
+            <div class="user-info-logout">
+              <a href="" class="btn btn-blue">Logout</a>
+            </div>
+          </div>
         </div>
-        <div class="featured-pructs-module">
-          <h2>Featured prdoucts</h2>
+        <div class="featured-products">
+          <h2 class="featured-products-title">Featured products</h2>
+          <div class="featured-products-list text-center">
+            <?php echo do_shortcode("[featured_products per_page='3' columns='1']"); ?>
+          </div>
         </div>
       </aside>
       <div class="col-lg-8 posts-feed">

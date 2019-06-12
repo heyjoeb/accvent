@@ -1,0 +1,18 @@
+.featured-products {
+  &-title {
+    font-weight: $fw-regular;
+    font-size: 1.3rem;
+    border-top: solid 1px $c-lightgray;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+  .woocommerce ul.products li.product a img {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .woocommerce ul.products li.product .button {
+    display: none;
+  }
+}
