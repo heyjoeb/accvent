@@ -119,13 +119,13 @@
             <div class="user-info-links">
               <ul>
                 <li><a target="_blank" href="/wp-admin/post-new.php">Add new item</a></li>
-                <li><a target="_blank" href="">My Page</a></li>
-                <li><a target="_blank" href="">My Account</a></li>
-                <li><a target="_blank" href="">Moderate comments</a></li>
+                <li><a href="<?php echo get_author_posts_url($current_user->ID) ?>">My Page</a></li>
+                <li><a target="_blank" href="/wp-admin/profile.php">My Account</a></li>
+                <li><a target="_blank" href="/wp-admin/edit-comments.php?comment_status=moderated">Moderate comments</a></li>
               </ul>
             </div>
             <div class="user-info-logout">
-              <a href="" class="btn btn-blue">Logout</a>
+              <a href="/wp-login.php?action=logout" class="btn btn-blue">Logout</a>
             </div>
           </div>
         </div>
@@ -175,7 +175,7 @@
             <?php endif; ?>
 
             <?php wp_reset_query();  // Restore global post data stomped by the_post(). ?>
-            <div class="col-lg-12">
+            <div class="col-12">
               <?php echo bootstrap_pagination($the_query); ?>
             </div>
         </div>
