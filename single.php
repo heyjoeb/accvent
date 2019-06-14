@@ -1,23 +1,48 @@
 <?php get_header(); ?> 
 
-	<section class="featured featured-products">
+	<section class="section-post-detail my-5">
       <div class="container">
         <div class="row">
+          <aside class="col-lg-4">
+            <?php include("components/co-sidebar-post-categories.php");?>
+            <?php include("components/co-sidebar-forecast.php");?>
+            <?php include("components/co-sidebar-user-info.php");?>
+            <?php include("components/co-sidebar-featured-products.php");?>
+          </aside>
 
-
-            <div class="product-column col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
-                  <article class="item-product">
-                    <h1 class="txt-underline"><?php the_title() ;?></h1>
-                    <div class="img-container">
-                    	<?php the_post_thumbnail(); ?>
-                    </div>
-                    <?php the_content(); ?>
-                  </article><!--/.item-product -->
-            </div><!--/.product-column -->
+           <div class="col-lg-8 post-detail-column">
+            <div class="row">
+              <article class="post-detail">
+                <div class="post-detail__meta d-flex justify-content-between align-items-center">
+                  <span>Por: <?php the_author_link(); ?></span> 
+                  <span><?php echo get_the_date(); ?></span>
+                  <?php edit_post_link(); ?>
+                </div>
+                <div class="post-detail__image">
+                  <?php the_post_thumbnail(); ?>
+                </div>
+                <h1 class="post-detail__title"><?php the_title() ;?></h1>
+                <div class="post-detail__text">
+                  <?php the_content(); ?>
+                </div>
+                <?php if( get_field('info_adicional')): ?>
+                  <div class="post-detail__extra">
+                    <h2 class="post-detail__extra-title">Información Adicional</h2>
+                    <ul>
+                      <li><span class="txt-bold">Fecha Inicio:</span><?php the_field('fecha_inicio'); ?></li>
+                      <li><span class="txt-bold">Fecha Fin:</span><?php the_field('fecha_fin'); ?></li>
+                      <li><span class="txt-bold">Lugar:</span><?php the_field('lugar'); ?></li>
+                      <li><span class="txt-bold">Número de asistentes:</span><?php the_field('numero_asistentes'); ?></li>
+                    </ul>
+                  </div>
+                <?php endif; ?>
+              </article><!--/.post-detail -->
+            </div>
+          </div>
 
         </div><!--/.row -->
       </div><!--/.container -->
-    </section><!--/.featured-products -->
+    </section><!--/.section-post-detail -->
 	
 
 <?php get_footer();?>

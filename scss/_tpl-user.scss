@@ -1,0 +1,27 @@
+.section-author {
+  .forecast-login {
+    padding-top: 30px;
+  }
+  .user-info {
+    &-title {
+      margin-top: 0;
+      border-top: 0;
+      padding-top: 0;
+    }
+    &-links {
+      padding-top: 15px;
+      &__my-page {
+        display: none;
+      }
+    }
+  }
+  .posts-feed {
+    h1 {
+      font-weight: 400;
+      font-size: 1.3rem;
+      padding-bottom: 30px;
+      border-bottom: 1px solid $c-lightgray;
+      margin-bottom: 30px;
+    }
+  }
+}

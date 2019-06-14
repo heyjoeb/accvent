@@ -1,0 +1,40 @@
+// hide fields on user admin
+#your-profile .user-rich-editing-wrap {
+  display: none;
+}
+#your-profile .user-syntax-highlighting-wrap {
+  display: none;
+}
+#your-profile .user-admin-color-wrap {
+  display: none;
+}
+#your-profile .user-comment-shortcuts-wrap {
+  display: none;
+}
+#your-profile .show-admin-bar.user-admin-bar-front-wrap {
+  display: none;
+}
+#your-profile .user-language-wrap {
+  display: none;
+}
+#your-profile .user-url-wrap {
+  display: none;
+}
+#your-profile .user-profile-picture {
+  display: none;
+}
+#your-profile .user-description-wrap {
+  display: none;
+}
+#your-profile #fieldset-billing {
+  display: none;
+}
+#your-profile #fieldset-shipping {
+  display: none;
+}
+#your-profile .user-rich-editing-wrap {
+  display: none;
+}
+#your-profile h2 {
+  display: none;
+}

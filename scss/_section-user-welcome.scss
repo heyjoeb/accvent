@@ -8,10 +8,16 @@
     padding-top: 30px;
     padding-bottom: 15px;
   }
-  .avatar {
-    border-radius: 50%;
-    padding: 5px;
-    border: solid 1px $c-lightgray;
+  &-image {
+    img {
+      width: 95px;
+      height: 95px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 50%;
+      padding: 5px;
+      border: solid 1px $c-lightgray;
+    }
   }
   &-name {
     font-size: 1.3rem;
@@ -50,6 +56,9 @@
       &:hover, &:active, &:focus {
         color: $c-green;
       }
+    }
+    &__linkedin {
+      display: none;
     }
   }
   &-logout {

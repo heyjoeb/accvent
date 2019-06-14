@@ -35,6 +35,12 @@ require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 	}
 	add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 
+  // REMOVE SOME FIELDS FROM USER ADMIN
+  function my_admin_head() {
+        echo '<link href="'.get_stylesheet_directory_uri().'/user-admin.css" rel="stylesheet" type="text/css">';
+  }
+  add_action('admin_head', 'my_admin_head');
+
 	// ADD CLASS TO BODY IF IT'S NOT HOME
 	function my_class_names($classes) {
 		// add 'class-name' to the $classes array
@@ -135,6 +141,14 @@ function loggedin_users_only() {
 
 //use the wp hook to load this function on every page load
 add_action( 'wp', 'loggedin_users_only' );
+
+// EXCERPT LENGTH
+function new_excerpt_length($length) {
+return 21;
+}
+add_filter('excerpt_length', 'new_excerpt_length');
+
+
 
 	
 
