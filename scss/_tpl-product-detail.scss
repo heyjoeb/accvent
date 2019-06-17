@@ -1,0 +1,83 @@
+.product-detail {
+  &__title {
+    font-size: 1.5rem;
+  }
+  &__meta {
+    padding: 30px 15px;
+    background-color: $c-lightgray;
+    .post-edit-link {
+      font-size: 0;
+      width: 25px;
+      height: 25px;
+      background-image: url(../accvent-theme/assets/icon-edit.svg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      @include transition_all;
+      &:hover {
+        @include transition_all;
+        opacity: 0.6;
+      }
+    }
+  }
+  &__extra {
+    background-color: $c-blue;
+    color: $c-white;
+    border-radius: 15px;
+    padding: 30px;
+    font-size: 0.9rem;
+    &-title {
+      font-size: 1.2rem;
+      padding-bottom: 15px;
+    }
+    ul {
+      padding-left: 17px;
+      margin-bottom: 0;
+    }
+    li {
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .txt-bold {
+      padding-right: 10px;
+    }
+    a {
+      color: $c-white;
+      &:hover, &:active, &:focus {
+        opacity: 0.7;
+      }
+    }
+  }
+  ul {
+    padding-left: 17px;
+    margin-bottom: 0;
+  }
+  li {
+     margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__image {
+    &--gallery {
+      div {
+        width: 33.333%;
+        border: solid 1px $c-lightgray;
+        margin: 0 15px;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__text {
+    h1, h2, h3, h4, h5 {
+      font-size: 1.2rem;
+      padding-bottom: 15px;
+    }
+  }
+}

@@ -148,6 +148,22 @@ return 21;
 }
 add_filter('excerpt_length', 'new_excerpt_length');
 
+// ADD INSTRUCTION TO FEATURED IMAGE BOX
+add_filter( 'admin_post_thumbnail_html', 'add_featured_image_html');
+
+function add_featured_image_html( $html ) {
+
+    return $html .= '<p>Tamaño: 760px ancho X 440px alto.</p>';
+
+}
+
+// DISPLAY SKU
+add_action( 'woocommerce_single_product_summary', 'dev_designs_show_sku', 5 );
+function dev_designs_show_sku(){
+    global $product;
+    echo 'SKU: ' . $product->get_sku();
+}
+
 
 
 	
