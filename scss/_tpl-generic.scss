@@ -1,0 +1,13 @@
+.generic {
+  h1, h2, h3, h4, h5 {
+    font-size: 1.3rem;
+    padding: 15px 0;
+  }
+  a {
+    font-weight: 500;
+    color: $c-blue;
+    &:hover, &:active, &:focus {
+      color: $c-green;
+    }
+  }
+}

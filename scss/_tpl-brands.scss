@@ -1,0 +1,26 @@
+.brands {
+  &__main-image {
+    img {
+      width: 100%;
+    }
+    margin-bottom: 50px;
+  }
+  &__main-text {
+    padding-bottom: 50px;
+  }
+  &__single-brand {
+    border: solid 1px $c-lightgray;
+    padding: 30px;
+    &-name {
+      font-size: 1.3rem;
+      padding-bottom: 15px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 15px;
+    }
+  }
+}
