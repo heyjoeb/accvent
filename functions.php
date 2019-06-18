@@ -68,6 +68,14 @@ require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 			'capability'	=> 'edit_posts',
 			'parent_slug'	=> 'modulos-generales',
 		));
+
+    acf_add_options_sub_page(array(
+      'page_title'  => 'Slider',
+      'menu_title'  => 'slider',
+      'menu_slug'   => 'slider',
+      'capability'  => 'edit_posts',
+      'parent_slug' => 'modulos-generales',
+    ));
 		
 		
 	}

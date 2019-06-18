@@ -48,7 +48,7 @@
 
                                     if( $file ): ?>
                                       
-                                      <a target="_blank" href="<?php echo $file['url']; ?>"><?php echo $file['filename']; ?></a>
+                                      <a target="_blank" href="<?php echo $file['url']; ?>"><?php echo $file['title']; ?></a>
 
                                     <?php endif; ?>
                                   </li>
