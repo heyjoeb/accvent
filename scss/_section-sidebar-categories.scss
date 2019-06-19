@@ -9,9 +9,12 @@
     padding: 0;
     li {
       display: block;
-      margin-bottom: 15px;
+      margin-bottom: 7px;
+      padding-bottom: 7px;
+      border-bottom: solid 1px $c-lightgray;
       &:last-child {
         margin-bottom: 0;
+        border: 0;
       }
     }
   }

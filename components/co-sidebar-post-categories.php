@@ -1,5 +1,5 @@
 <div class="post-categories">
-  <h2 class="post-categories__title">Categorías</h2>
+  <h2 class="post-categories__title">Categorías de Posts</h2>
   <ul>
       <?php
       $categories = get_categories();

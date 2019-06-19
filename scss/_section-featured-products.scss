@@ -9,12 +9,21 @@
     padding-top: 30px;
     padding-bottom: 15px;
   }
-  .woocommerce ul.products li.product a img {
-    max-width: 250px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .woocommerce ul.products li.product .button {
-    display: none;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin-bottom: 30px;
+      h2 {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      img {
+        max-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   }
 }
