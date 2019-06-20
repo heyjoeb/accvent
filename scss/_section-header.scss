@@ -10,4 +10,43 @@
       color: $c-green;
     }
   }
+  .dropdown {
+    .btn {
+      padding: 0;
+      margin-left: 15px;
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+    .dropdown-menu {
+      left: -265px;
+      width: 305px;
+      padding: 15px;
+      background-color: $c-lightgray;
+      .btn {
+        padding: 6px 10px;
+        margin-left: -15px;
+        position: relative;
+        z-index: 2 !important;
+        border-radius: 0 10px 10px 0;
+      }
+    }
+    #search-submit {
+      border: solid 1px $c-blue;
+      background-color: $c-blue;
+      font-size: 1rem;
+      color: $c-white;
+      @include transition_all;
+      &:hover, &:active, &:focus {
+        background-color: $c-green;
+        border-color: $c-green;
+        @include transition_all;
+      }
+    }
+    input {
+      border-radius: 10px 0 0 10px;
+      border: 1px solid #ced4da;
+    }
+  }
 }

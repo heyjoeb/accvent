@@ -34,7 +34,7 @@
                 if ( has_post_thumbnail( $loop->post->ID ) ) 
                     echo get_the_post_thumbnail( $loop->post->ID, 'shop_catalog' ); 
                 else 
-                    echo '<img src="' . woocommerce_placeholder_img_src() . '" alt="Placeholder" width="65px" height="115px" />'; 
+                    echo '<img src="<?php echo get_bloginfo( "stylesheet_directory" ); ?>/assets/placeholder.png" />'; 
             ?>
             <h2 class="featured-products-subtitle"><?php the_title(); ?></h2>
             </a>    

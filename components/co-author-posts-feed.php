@@ -9,7 +9,11 @@
                <div class="col-lg-6 posts-feed__column">
                     <article class="posts-feed__post">
                       <a href="<?php the_permalink(); ?>">
-                        <?php the_post_thumbnail(); ?>
+                        <?php if ( has_post_thumbnail() ) : ?>
+                          <?php the_post_thumbnail(); ?>
+                      <?php else : ?>
+                          <img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/assets/placeholder.png" />
+                      <?php endif; ?>
                       </a>
                       <a class="posts-feed__title" href="<?php the_permalink(); ?>">
                         <?php the_title( '<h2>', '</h2>' ); ?>

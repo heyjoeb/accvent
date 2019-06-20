@@ -179,6 +179,29 @@ function mytheme_add_woocommerce_support() {
 }
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
+
+// CHANGE SEARCH RESULT POSTS PER PAGE
+  function change_wp_search_size($query) {
+      if ( $query->is_search ) // Make sure it is a search page
+          $query->query_vars['posts_per_page'] = 9; // Change 9 to the number of posts you would like to show
+
+      return $query; // Return our modified query variables
+  }
+  add_filter('pre_get_posts', 'change_wp_search_size'); // Hook our custom function onto the request filter
+
+  // ONLY SEARCH POSTS & PRODUCTS
+  function searchfilter($query) {
+ 
+      if ($query->is_search && !is_admin() ) {
+          $query->set('post_type',array('post', 'product'));
+      }
+   
+  return $query;
+  }
+   
+  add_filter('pre_get_posts','searchfilter');
+
+
 	
 
 

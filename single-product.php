@@ -18,10 +18,17 @@
                   <?php edit_post_link(); ?>
                 </div>
                 <div class="row">
+                  <div class="col-12 mb-5">
+                    <?php echo do_shortcode('[addtoany]'); ?>
+                  </div>
                   <div class="col-lg-6">
                     <div class="product-detail__image">
-                      <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );?>
-                      <img src="<?php  echo $image[0]; ?>" alt="<?php the_title() ;?>">
+                      <?php if ( has_post_thumbnail() ) : ?>
+                          <?php the_post_thumbnail(); ?>
+                      <?php else : ?>
+                          <img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/assets/placeholder.png" />
+                      <?php endif; ?>
+                
                     </div>
                   </div>
                   <div class="col-lg-6">

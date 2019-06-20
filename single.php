@@ -19,7 +19,14 @@
                   <?php edit_post_link(); ?>
                 </div>
                 <div class="post-detail__image">
-                  <?php the_post_thumbnail(); ?>
+                  <?php if ( has_post_thumbnail() ) : ?>
+                          <?php the_post_thumbnail(); ?>
+                      <?php else : ?>
+                          <img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/assets/placeholder.png" />
+                      <?php endif; ?>
+                </div>
+                <div class="mt-3 mb-0">
+                  <?php echo do_shortcode('[addtoany]'); ?>
                 </div>
                 <h1 class="post-detail__title"><?php the_title() ;?></h1>
                 <div class="post-detail__text">
