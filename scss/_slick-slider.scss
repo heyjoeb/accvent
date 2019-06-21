@@ -12,11 +12,18 @@
       width: 80%;
       max-width: 520px;
       text-align: center;
-      top: 30%;
+      top: 25%;
       margin-left: auto;
       margin-right: auto;
       left: 0;
       right: 0;
+      @include media-breakpoint-down(lg) {
+        top: 10%;
+        width: 90%;
+      }
+      @include media-breakpoint-down(sm) {
+        top: 30%;
+      }
       h2 {
         font-weight: $fw-light;
         font-size: 1.5rem;
@@ -24,6 +31,17 @@
       p {
         font-size: 1.6rem;
         padding: 30px 0;
+        @include media-breakpoint-down(lg) {
+          font-size: 1.3rem;
+          padding: 20px 0;
+        }
+        @include media-breakpoint-down(md) {
+          padding: 5px 0;
+          font-size: 1.1rem;
+        }
+        @include media-breakpoint-down(xs) {
+          display: none;
+        }
       }
     }
     img {

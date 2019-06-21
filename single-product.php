@@ -3,14 +3,14 @@
 	<section class="section-product-detail my-5">
       <div class="container">
         <div class="row">
-          <aside class="col-lg-4">
+          <aside class="mt-5 mt-md-0 col-md-5 col-lg-4 order-last order-md-first">
             <?php include("components/co-sidebar-product-categories.php");?>
             <?php include("components/co-sidebar-forecast.php");?>
             <?php include("components/co-sidebar-user-info.php");?>
             <?php include("components/co-sidebar-featured-products.php");?>
           </aside>
 
-           <div class="col-lg-8 product-detail-column">
+           <div class="col-md-7 col-lg-8 product-detail-column order-first order-md-last">
             <div class="row">
               <article class="product-detail">
                 <div class="product-detail__meta d-flex justify-content-end align-items-center mb-5">

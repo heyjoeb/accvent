@@ -13,7 +13,7 @@
             <?php if( $the_query->have_posts() ): ?>
             
               <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                <div class="col-lg-6 posts-feed__column">
+                <div class="col-lg-12 col-xl-6 posts-feed__column">
                   <article class="posts-feed__post">
                     <a href="<?php the_permalink(); ?>">
                       <?php if ( has_post_thumbnail() ) : ?>

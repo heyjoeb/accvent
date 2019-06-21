@@ -8,7 +8,7 @@
 <?php wp_head(); ?>
   </head>
   <body <?php body_class( array( "fade" ) ); ?>>
-    <nav class="navbar navbar-expand-lg px-0 py-3" role="navigation">
+    <nav class="navbar navbar-light navbar-expand-lg px-sm-0 py-3" role="navigation">
       <div class="container px-0">
         <a class="navbar-brand text-hide" href="/" style="background-image: url(<?php the_field('logo_header', 'option'); ?>);">Accvent</a>
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -18,7 +18,7 @@
         <?php
           wp_nav_menu( array(
             'theme_location'  => 'primary',
-            'depth'           => 1, // 1 = no dropdowns, 2 = with dropdowns.
+            'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
             'container'       => 'div',
             'container_class' => 'collapse navbar-collapse',
             'container_id'    => 'main-navbar',

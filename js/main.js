@@ -59,16 +59,10 @@ $(document).ready(function() {
     slidesToShow: 1,
     responsive: [
       {
-        breakpoint: 900,
+        breakpoint: 766,
         settings: {
-          slidesToShow: 2
-        }
-      },
-      {
-        breakpoint: 500,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
+          centerMode: false,
+          centerPadding: 0
         }
       }
   ]

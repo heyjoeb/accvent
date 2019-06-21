@@ -8,11 +8,11 @@
 <section class="section-main my-5">
   <div class="container">
     <div class="row">
-      <aside class="col-lg-4">
+      <aside class="mt-5 mt-md-0 col-md-5 col-lg-4 order-last order-md-first">
         <?php include("components/co-sidebar-forecast.php");?>
         <?php include("components/co-sidebar-user-info.php");?>
       </aside>
-      <div class="col-lg-8 brands">
+      <div class="col-md-7 col-lg-8 brands order-first order-md-last">
         <div class="brands__main-image">
           <?php $image_brand = get_field('imagen_brand'); ?>
           <img src="<?php echo $image_brand['url']; ?>" alt="<?php echo $image_brand['alt']; ?>">
@@ -24,7 +24,7 @@
           <?php
           if( have_rows('brands') ):
             while ( have_rows('brands') ) : the_row();?>
-              <div class="col-lg-6 brands__single-brand">
+              <div class="col-md-12 col-lg-6 brands__single-brand">
                 <div class="brands__single-brand-image">
                   <?php $brand_image = get_sub_field('imagen_brand'); ?>
                   <img src="<?php echo $brand_image['url']; ?>" alt="<?php echo $brand_image['alt']; ?>">

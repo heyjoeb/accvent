@@ -1,13 +1,60 @@
 .generic {
-  h1, h2, h3, h4, h5 {
-    font-size: 1.3rem;
-    padding: 15px 0;
+  .tools {
+    h1, h2, h3, h4, h5 {
+      font-size: 1.3rem;
+      padding: 15px 0;
+    }
+    a {
+      font-weight: 500;
+      color: $c-blue;
+      &:hover, &:active, &:focus {
+        color: $c-green;
+      }
+    }
   }
-  a {
-    font-weight: 500;
-    color: $c-blue;
-    &:hover, &:active, &:focus {
-      color: $c-green;
+  &.generic--table {
+    table, thead, tbody, th, td, tr {
+      @include media-breakpoint-down(md) {
+        display: block;
+      }
+      @include media-breakpoint-down(xs) {
+        font-size: 0.8rem;
+      }
+    }
+    thead {
+      tr {
+        @include media-breakpoint-down(md) {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+        }
+      }
+    }
+    tr {
+      @include media-breakpoint-down(md) {
+        border: 1px solid #ccc;
+      }
+    }
+    td {
+      @include media-breakpoint-down(md) {
+        border: none;
+        border-bottom: 1px solid #eee; 
+        position: relative;
+        padding-left: 50%; 
+        white-space: normal;
+        text-align:left;
+        &:before {
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          width: 45%; 
+          padding-right: 10px; 
+          white-space: nowrap;
+          text-align:left;
+          font-weight: bold;
+          content: attr(data-title);
+        }
+      }
     }
   }
 }

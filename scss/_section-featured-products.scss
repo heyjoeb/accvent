@@ -1,6 +1,9 @@
 .featured-products {
   margin-right: 70px;
    margin-bottom: 40px;
+   @include media-breakpoint-down(sm) {
+    margin-right: 0;
+  }
   &-title {
     font-weight: $fw-regular;
     font-size: 1.3rem;

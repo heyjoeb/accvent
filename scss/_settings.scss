@@ -92,6 +92,10 @@ button {
   border-radius: 20px;
   font-size: 1.3rem;
   padding: 5px 30px;
+  @include media-breakpoint-down(md) {
+    font-size: 1.1rem;
+    padding: 5px 15px;
+  }
   &-white {
     border-color: $c-white;
     color: $c-white;

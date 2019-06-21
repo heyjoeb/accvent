@@ -8,12 +8,12 @@
   <section class="section-products my-5">
       <div class="container">
         <div class="row">
-          <aside class="col-lg-4">
+          <aside class="mt-5 mt-md-0 col-md-5 col-lg-4 order-last order-md-first">
             <?php include("components/co-sidebar-forecast.php");?>
             <?php include("components/co-sidebar-user-info.php");?>
           </aside>
 
-           <div class="col-lg-8 products-column">
+           <div class="col-md-7 col-lg-8 products-column order-first order-md-last">
       
 
                  <?php 
@@ -41,7 +41,7 @@ $image = wp_get_attachment_url( $thumbnail_id );
       
         echo '
  
-<div class="col-lg-4 text-center product-category">';
+<div class="col-6 col-lg-4 text-center product-category">';
         echo '<a class="d-flex" href="'.get_term_link($category).'" >';
         echo "<img class='align-self-center' src='$image' />";
         echo "<p class='product-category-name align-self-end' />$category->name</p>";

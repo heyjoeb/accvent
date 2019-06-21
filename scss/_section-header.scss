@@ -10,7 +10,27 @@
       color: $c-green;
     }
   }
+  .container {
+    @include media-breakpoint-down(md) {
+      position: relative;
+    }
+  }
+  .navbar-toggler {
+    @include media-breakpoint-down(md) {
+      margin-right: 60px;
+    }
+  }
+  .navbar-nav {
+    @include media-breakpoint-down(md) {
+      padding-top: 30px;
+    }
+  }
   .dropdown {
+    @include media-breakpoint-down(md) {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
     .btn {
       padding: 0;
       margin-left: 15px;
