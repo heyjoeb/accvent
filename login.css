@@ -1,3 +1,6 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 body.login div#login {
   background-color: rgba(0,0,0,0.8);
   width: 60%;
@@ -130,4 +133,35 @@ input[type=checkbox], input[type=color], input[type=date], input[type=datetime-l
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+@media only screen and (max-width: 1200px) {
+  body.login div#login {
+    padding: 75px 75px 290px 75px;
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  body.login div#login {
+    width: 90%;
+    padding: 75px 35px 360px 35px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .login .intro-container {
+    width: 95%;
+    bottom: 0;
+  }
+  .login .intro-title {
+    font-size: 1.2rem;
+  }
+  .login form {
+    width: 100%;
+    max-width: none;
+    padding: 25px 0;
+  }
+}
+@media only screen and (max-width: 400px) {
+  body.login div#login {
+    padding: 75px 75px 415px 75px;
+  }
 }
