@@ -14,6 +14,10 @@
   }
   &__post {
     margin-bottom: 80px;
+    a {
+      width: 100%;
+      display: block;
+    }
   }
   &__meta {
     padding-top: 15px;

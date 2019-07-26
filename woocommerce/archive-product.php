@@ -3,13 +3,13 @@
   <section class="section-product-category my-5">
       <div class="container">
         <div class="row">
-          <aside class="col-lg-4">
+          <aside class="col-lg-4 order-last order-md-first">
             <?php include("wp-content/themes/accvent-theme/components/co-sidebar-product-categories.php");?>
             <?php include("wp-content/themes/accvent-theme/components/co-sidebar-forecast.php");?>
             <?php include("wp-content/themes/accvent-theme/components/co-sidebar-user-info.php");?>
           </aside>
 
-           <div class="col-lg-8 product-category-column">
+           <div class="col-lg-8 product-category-column order-first order-md-last">
             <h2 class="pt-0 category-title"><?php echo single_cat_title(); ?></h2>
             <div class="row">
               <?php 

@@ -12,7 +12,7 @@
 
            <div class="col-md-7 col-lg-8 product-detail-column order-first order-md-last">
             <div class="row">
-              <article class="product-detail">
+              <article class="col-12 product-detail">
                 <div class="product-detail__meta d-flex justify-content-end align-items-center mb-5">
                   <h1 class="product-detail__title"><?php the_title() ;?></h1>
                   <?php edit_post_link(); ?>

@@ -5,6 +5,7 @@
   }
   &__item-wrapper {
     position: relative;
+    background-color: $c-black;
     &-text {
       position: absolute;
       z-index: 1;
@@ -46,9 +47,42 @@
     }
     img {
       width: 100%;
+      opacity: 0.6;
     }
   }
   .slick-arrow {
     display: none !important;
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    left: 50%;
+    margin-left: -25%;
+    @include media-breakpoint-down(md) {
+      width: 90%;
+      margin-left: -45%;
+    }
+    li {
+      display: inline-block;
+      margin: 0 10px;
+      &.slick-active {
+        button {
+          background-color: $c-white;
+        }
+      }
+      button {
+        background-color: transparent;
+        border: solid 1px $c-white;
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+      }
+    }
   }
 }

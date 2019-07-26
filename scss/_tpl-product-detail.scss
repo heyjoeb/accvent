@@ -1,3 +1,8 @@
+.section-product-detail {
+  .container {
+    overflow-x: hidden;
+  }
+}
 .product-detail {
   &__title {
     font-size: 1.5rem;

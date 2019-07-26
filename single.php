@@ -12,7 +12,7 @@
 
            <div class="col-md-7 col-lg-8 post-detail-column order-first order-md-last">
             <div class="row">
-              <article class="post-detail">
+              <article class="col-12 post-detail">
                 <div class="post-detail__meta d-flex justify-content-between align-items-center">
                   <span>Por: <?php the_author_link(); ?></span> 
                   <span><?php echo get_the_date(); ?></span>

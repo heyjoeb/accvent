@@ -55,6 +55,7 @@ $(document).ready(function() {
   /* gallery slider */
   $('.main-slider').slick({
     centerMode: true,
+    dots: true,
     centerPadding: '20%',
     slidesToShow: 1,
     responsive: [
